@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
 
-    "server": "json-server --watch db.json --port 5000",
+    "server": "json-server --watch db.json --port 5000 --middlewares ./range.js",
     "client": "npm start --prefix client",
-    "dev" : "npm concurrently \"npm run server\" \"npm run client\""
+    "dev" : "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "",
   "license": "ISC",
